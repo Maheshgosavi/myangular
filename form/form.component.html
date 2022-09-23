@@ -1,0 +1,34 @@
+<div class="container rounded shadow">
+  <form #myform="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="form-group col-md-6  "  >
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name= "userName" ngModel>
+      </div>
+
+     <div class="form-group col-md-6">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" name="age"ngModel>
+     </div>
+     <div class="form-group col-md-6">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" ngModel>
+     </div>
+     <div class="form-group col-md-6">
+        <label for="mobile">Mobile number</label>
+        <input type="number" class="form-control" name="mobile" ngModel>
+     </div>
+     <div class="form-group col-md-6">
+        <label for="select">Please select option</label>
+        <select class="form-control" name="select" ngModel>
+            <option value="default">Please select option</option>
+            <option *ngFor="let man of position">{{man}}</option>
+        </select>
+
+     </div>
+     
+        <button class="btn btn-primary mt-4" type="submit">Submit</button>
+
+
+
+  </form>
+</div>
